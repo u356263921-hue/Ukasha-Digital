@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ukasha Digital Marketer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding-top: 100px;
+        }
+
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            padding: 5rem 0;
+            align-items: start;
+        }
+
+        @media (max-width: 900px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .contact-info-card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .info-block {
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-block h4 {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-block p,
+        .info-block a {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        .info-block a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* Form Styling */
+        .contact-form {
+            background: rgba(10, 18, 46, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 3.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        /* Auto-reply UI */
+        #form-status {
+            display: none;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border-radius: 8px;
+            background: rgba(0, 255, 85, 0.1);
+            border: 1px solid var(--rgb-emerald);
+            color: #00FF55;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: #FFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="particles-js"></canvas>
+
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo text-gold">UKASHA DIGITAL MARKETER.</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="case-studies.html" class="nav-link">Results</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Get
+                    Started</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <section class="container contact-section" data-aos="fade-up">
+
+        <!-- Contact Info -->
+        <div class="contact-info-card">
+            <h1 class="text-gold" style="font-size: 2.5rem; margin-bottom: 2rem;">Let's Build Your Empire</h1>
+            <p style="color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.1rem; line-height: 1.6;">
+                Ready to aggressively scale your revenue? Book a strategy call or reach out directly to our elite growth
+                team.
+            </p>
+
+            <div class="info-block">
+                <h4>Direct Line</h4>
+                <a href="https://wa.me/923197791698" target="_blank"><i class="fab fa-whatsapp text-gold"
+                        style="margin-right: 10px;"></i>
+                    +92-319-7791-698</a>
+            </div>
+
+            <div class="info-block">
+                <h4>Email Admissions</h4>
+                <a href="mailto:m.ukasha.nazar@gmail.com" style="word-break: break-all;"><i
+                        class="fas fa-envelope text-gold" style="margin-right: 10px;"></i> m.ukasha.nazar@gmail.com</a>
+            </div>
+
+            <div class="info-block">
+                <h4>Headquarters</h4>
+                <p><i class="fas fa-map-marker-alt text-gold" style="margin-right: 10px;"></i> Silicon Valley, CA</p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3 style="font-size: 1.8rem; margin-bottom: 2rem;">Request a Discovery Call</h3>
+            <form id="discoveryForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name *</label>
+                        <input type="text" id="company" class="form-control" placeholder="Acme Corp" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" id="email" class="form-control" placeholder="john@acmecorp.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Current Monthly Revenue *</label>
+                        <select id="revenue" class="form-control" required style="color: rgba(255,255,255,0.8);">
+                            <option value="">Select Range</option>
+                            <option value="under50k">Under $50,000</option>
+                            <option value="50k-250k">$50,000 - $250,000</option>
+                            <option value="250k-1m">$250,000 - $1M</option>
+                            <option value="over1m">Over $1M</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>How can we help scale your business? *</label>
+                    <textarea id="message" class="form-control"
+                        placeholder="Details about your current marketing channels and bottlenecks..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 8px;">Apply to Work
+                    With Us</button>
+
+                <div id="form-status">
+                    <i class="fas fa-check-circle"></i> Application received! An automated email & CRM entry has been
+                    triggered. Our team will review and reply to you directly from m.ukasha.nazar@gmail.com shortly.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Widget Integration -->
+    <a href="https://wa.me/923197791698" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer (Simplified) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <h4 class="text-gold"
+                        style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); margin-bottom: 1.5rem;">
+                        UKASHA.</h4>
+                    <p>Building powerful digital empires through elite marketing strategies, premium design, and
+                        engineered growth systems.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Agency</a></li>
+                        <li><a href="services.html">Elite Services</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Marketing Insights</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fab fa-whatsapp text-gold" style="margin-right: 10px;"></i> <a
+                                href="https://wa.me/923197791698" target="_blank">+92-319-7791-698</a></li>
+                        <li><i class="fas fa-envelope text-gold" style="margin-right: 10px;"></i> <a
+                                href="mailto:m.ukasha.nazar@gmail.com">m.ukasha.nazar@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt text-gold" style="margin-right: 10px;"></i> Silicon Valley,
+                            CA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ukasha Digital Marketer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <!-- AOS Animations JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // CRM & Auto-Reply Simulation Logic
+        document.getElementById('discoveryForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+
+            // Loading state
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            btn.disabled = true;
+
+            // Simulate API request to CRM
+            setTimeout(() => {
+                document.getElementById('form-status').style.display = 'block';
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+                this.reset();
+
+                // Simulate Newsletter Subscription if opted-in (implicit here)
+                console.log("Mock CRM Sync: User added to ActiveCampaign.");
+                console.log("Mock Automation: Auto-reply configured from m.ukasha.nazar@gmail.com dispatched.");
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Insights | Ukasha Digital Marketer</title>
+    <!-- Fonts, Icons, Styles as usual -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 5rem;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .blog-card {
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition-fast);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .blog-img {
+            height: 250px;
+            background: var(--bg-tertiary);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.05);
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .blog-content {
+            padding: 2.5rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--gold-primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .read-more i {
+            transition: transform 0.3s;
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="particles-js"></canvas>
+
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"
+                style="display: flex; align-items: center; text-decoration: none; z-index: 100;">
+                <img src="assets/images/logo-horizontal.png" alt="Ukasha Digital Marketing"
+                    style="height: 65px; width: auto; max-width: 300px; object-fit: contain; mix-blend-mode: multiply; filter: contrast(1.2) drop-shadow(0 0 10px rgba(212,175,55,0.2)); transform: scale(1.1); transform-origin: left center;">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="case-studies.html" class="nav-link">Results</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Get
+                    Started</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container" data-aos="fade-up">
+            <h1 class="text-gold" style="font-size: 3.5rem; margin-bottom: 1rem;">Elite Intelligence</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">High-level
+                insights, strategies, and industry secrets from the architects of digital empires.</p>
+        </div>
+    </header>
+
+    <section class="py-20">
+        <div class="container">
+            <div class="blog-grid">
+
+                <!-- Article 1 -->
+                <article class="blog-card" data-aos="fade-up">
+                    <div class="blog-img">
+                        <i class="fas fa-robot"></i>
+                        <div
+                            style="position: absolute; inset:0; background: linear-gradient(45deg, rgba(0,240,255,0.2), transparent);">
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>SEO Strategy</span>
+                            <span>Feb 26, 2026</span>
+                        </div>
+                        <h2 class="blog-title">Surviving the AI Search Revolution: How to Future-Proof Your Organic
+                            Traffic</h2>
+                        <p class="blog-excerpt">With AI Overviews and ChatGPT search dominating user queries,
+                            traditional SEO is dead. Learn the elite entity-based architecture required to secure
+                            visibility in 2026 and beyond.</p>
+                        <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card" data-aos="fade-up" style="transition-delay: 0.1s;">
+                    <div class="blog-img">
+                        <i class="fas fa-chart-pie"></i>
+                        <div
+                            style="position: absolute; inset:0; background: linear-gradient(45deg, rgba(138,43,226,0.2), transparent);">
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Performance Ads</span>
+                            <span>Feb 20, 2026</span>
+                        </div>
+                        <h2 class="blog-title">The Meta Ads Blueprint That Scaled a Luxury Brand from $1M to $10M</h2>
+                        <p class="blog-excerpt">Stop wasting budget on broad targeting. Discover the exact campaign
+                            structure, creative psychology, and bidding strategy we use to engineer impossible ROAS.</p>
+                        <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card" data-aos="fade-up" style="transition-delay: 0.2s;">
+                    <div class="blog-img">
+                        <i class="fas fa-gem"></i>
+                        <div
+                            style="position: absolute; inset:0; background: linear-gradient(45deg, rgba(212,175,55,0.2), transparent);">
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>Brand Psychology</span>
+                            <span>Feb 12, 2026</span>
+                        </div>
+                        <h2 class="blog-title">Command Premium Prices: The Secret Psychology of Luxury Branding</h2>
+                        <p class="blog-excerpt">Why do some brands charge 10x more for the same product? It's not the
+                            features; it's the perception. We dissect the neuro-marketing principles that create
+                            high-ticket buyers.</p>
+                        <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <h4 class="text-gold"
+                        style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); margin-bottom: 1.5rem;">
+                        UKASHA.</h4>
+                    <p>Building powerful digital empires through elite marketing strategies, premium design, and
+                        engineered growth systems.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Agency</a></li>
+                        <li><a href="services.html">Elite Services</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Marketing Insights</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fab fa-whatsapp text-gold" style="margin-right: 10px;"></i> <a
+                                href="https://wa.me/923197791698" target="_blank">+92-319-7791-698</a></li>
+                        <li><i class="fas fa-envelope text-gold" style="margin-right: 10px;"></i> <a
+                                href="mailto:m.ukasha.nazar@gmail.com">m.ukasha.nazar@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt text-gold" style="margin-right: 10px;"></i> Silicon Valley,
+                            CA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ukasha Digital Marketer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <!-- AOS Animations JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

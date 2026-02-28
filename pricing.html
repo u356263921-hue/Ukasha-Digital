@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Pricing & Plans | Ukasha Digital Marketer</title>
+    <!-- Fonts, Icons, Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 5rem;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+        }
+
+        .pricing-section {
+            padding: 5rem 0 8rem;
+        }
+
+        /* Pricing Grid (Reused from style.css, slightly enhanced) */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .pricing-card {
+            background: rgba(10, 18, 46, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 3rem 2.5rem;
+            text-align: center;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        .pricing-card.popular {
+            transform: scale(1.05);
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+            z-index: 2;
+            background: var(--bg-secondary);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold-gradient);
+            color: var(--bg-primary);
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            margin: 2rem 0;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .price span.currency {
+            font-size: 1.5rem;
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+
+        .price span.period {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-left: 5px;
+        }
+
+        .features-list {
+            text-align: center;
+            margin: 2.5rem 0;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .features-list li {
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .features-list li i {
+            color: var(--gold-primary);
+        }
+
+        .faq-preview {
+            max-width: 800px;
+            margin: 6rem auto 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="particles-js"></canvas>
+
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"
+                style="display: flex; align-items: center; text-decoration: none; z-index: 100;">
+                <img src="assets/images/logo-horizontal.png" alt="Ukasha Digital Marketing"
+                    style="height: 65px; width: auto; max-width: 300px; object-fit: contain; mix-blend-mode: multiply; filter: contrast(1.2) drop-shadow(0 0 10px rgba(212,175,55,0.2)); transform: scale(1.1); transform-origin: left center;">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="case-studies.html" class="nav-link">Results</a>
+                <a href="pricing.html" class="nav-link" style="color: var(--gold-primary)">Pricing</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Get
+                    Started</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container" data-aos="fade-up">
+            <h1 class="text-gold" style="font-size: 3.5rem; margin-bottom: 1rem;">Elite Partnership Plans</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Transparent,
+                elite pricing structures for brands serious about aggressive scale and market domination.</p>
+        </div>
+    </header>
+
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+
+                <!-- Growth Tier -->
+                <div class="pricing-card" data-aos="fade-up">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Growth Framework</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Perfect for ambitious brands
+                        establishing presence.</p>
+                    <div class="price">
+                        <span class="currency">$</span>2,500<span class="period">/mo</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Select Growth</a>
+
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Foundational Technical & On-Page SEO</li>
+                        <li><i class="fas fa-check"></i> Meta & Google Ads Management (Up to $5k ad spend)</li>
+                        <li><i class="fas fa-check"></i> 8 High-Quality Social Media Posts per month</li>
+                        <li><i class="fas fa-check"></i> Foundational Conversion Tracking</li>
+                        <li><i class="fas fa-check"></i> Monthly Analytics & Strategy Report</li>
+                    </ul>
+                </div>
+
+                <!-- Empire Tier -->
+                <div class="pricing-card popular" data-aos="zoom-in" style="transition-delay: 0.1s;">
+                    <div class="popular-badge">RECOMMENDED</div>
+                    <h3 class="text-gold" style="font-size: 2.2rem; margin-bottom: 0.5rem;">Empire Scaling</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Complete domination of your digital
+                        market.</p>
+                    <div class="price">
+                        <span class="currency">$</span>5,500<span class="period">/mo</span>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" style="width: 100%;">Scale Your Empire</a>
+
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Advanced Enterprise Content & Tech SEO</li>
+                        <li><i class="fas fa-check"></i> Omni-channel Ad Management (Up to $25k ad spend)</li>
+                        <li><i class="fas fa-check"></i> Premium SMM & Short-Form Video Content</li>
+                        <li><i class="fas fa-check"></i> Continuous Conversion Rate Optimization</li>
+                        <li><i class="fas fa-check"></i> Bi-weekly Strategy Consulting Calls</li>
+                        <li><i class="fas fa-check"></i> Advanced CRM Integration & Analytics setup</li>
+                    </ul>
+                </div>
+
+                <!-- Titan Tier -->
+                <div class="pricing-card" data-aos="fade-up" style="transition-delay: 0.2s;">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Titan Enterprise</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Custom engineering for massive scale
+                        brands.</p>
+                    <div class="price"
+                        style="font-size: 3rem; margin-bottom: 0.5rem; justify-content: center; width: 100%;">
+                        <span class="currency" style="font-size: 1.2rem;">Custom</span>
+                    </div>
+                    <p
+                        style="font-size: 0.9rem; color: var(--gold-primary); margin-top: 0; margin-bottom: 2rem; text-align: center; width: 100%;">
+                        Starting at $10k/mo</p>
+                    <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Request Proposal</a>
+
+                    <ul class="features-list">
+                        <li><i class="fas fa-check"></i> Custom Software & AI Workflows Development</li>
+                        <li><i class="fas fa-check"></i> Infinite Ad Spend Management & Syndication</li>
+                        <li><i class="fas fa-check"></i> Full In-House Branding & Production Team Access</li>
+                        <li><i class="fas fa-check"></i> Dedicated Account Director & Growth Hacker</li>
+                        <li><i class="fas fa-check"></i> Weekly Reporting & Board Advisory</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="faq-preview" data-aos="fade-up">
+                <h3 class="text-gold" style="font-size: 2rem; margin-bottom: 1rem;">Not sure which tier?</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Our strategists will conduct an audit of
+                    your business and prescribe the exact system needed.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center;">
+                    <a href="contact.html" class="btn btn-primary">Book Audit Call</a>
+                    <a href="faq.html" class="btn btn-secondary">Read FAQs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Simplified) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <h4 class="text-gold"
+                        style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); margin-bottom: 1.5rem;">
+                        UKASHA.</h4>
+                    <p>Building powerful digital empires through elite marketing strategies, premium design, and
+                        engineered growth systems.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Agency</a></li>
+                        <li><a href="services.html">Elite Services</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Marketing Insights</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fab fa-whatsapp text-gold" style="margin-right: 10px;"></i> <a
+                                href="https://wa.me/923197791698" target="_blank">+92-319-7791-698</a></li>
+                        <li><i class="fas fa-envelope text-gold" style="margin-right: 10px;"></i> <a
+                                href="mailto:m.ukasha.nazar@gmail.com">m.ukasha.nazar@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt text-gold" style="margin-right: 10px;"></i> Silicon Valley,
+                            CA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ukasha Digital Marketer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <!-- AOS Animations JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

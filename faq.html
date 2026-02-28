@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Ukasha Digital Marketer</title>
+    <!-- Fonts, Icons, Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 5rem;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+        }
+
+        .faq-section {
+            padding: 5rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: var(--transition-fast);
+        }
+
+        .faq-item:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .faq-question i {
+            color: var(--gold-primary);
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-answer-content {
+            padding: 0 2rem 2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            /* arbitrary large height for transition */
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="particles-js"></canvas>
+
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"
+                style="display: flex; align-items: center; text-decoration: none; z-index: 100;">
+                <img src="assets/images/logo-horizontal.png" alt="Ukasha Digital Marketing"
+                    style="height: 65px; width: auto; max-width: 300px; object-fit: contain; mix-blend-mode: multiply; filter: contrast(1.2) drop-shadow(0 0 10px rgba(212,175,55,0.2)); transform: scale(1.1); transform-origin: left center;">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="case-studies.html" class="nav-link">Results</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Get
+                    Started</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container" data-aos="fade-up">
+            <h1 class="text-gold" style="font-size: 3.5rem; margin-bottom: 1rem;">Common Questions</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">Everything you
+                need to know about partnering with the top digital marketing elite.</p>
+        </div>
+    </header>
+
+    <section class="faq-section container" data-aos="fade-up">
+
+        <div class="faq-item">
+            <div class="faq-question">
+                What kind of ROI can I expect? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    While every business is unique, our average client sees a 350% increase in ROI within the first 6-8
+                    months. We engineer predictable revenue systems that scale linearly with your ad spend, meaning your
+                    ROI compounds over time as we optimize the funnel.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                How long does it take to see results? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    For Paid Ads (Meta, Google), you can expect to see initial traction and leads within the first 14
+                    days of campaign launch. For Enterprise SEO, significant traffic shifts begin around month 3, with
+                    exponential growth typically manifesting between months 6 and 9.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Do you work with startups? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    We partner with businesses that have proven product-market fit and the operational capacity to
+                    handle aggressive scale. If you are a funded startup or an established business doing at least
+                    $50k/month in revenue, we are the right fit. For earlier stage startups, we offer consultation
+                    services.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Are there any long-term contracts? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    No. We believe in earning your business every single month. We operate on month-to-month retainers
+                    because we are confident in our ability to deliver undeniable results that make leaving financially
+                    illogical.
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Who will be managing my account? <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    You won't be passed off to a junior account manager. Every client works directly with a dedicated
+                    Senior Growth Director backed by our elite team of media buyers, SEO architects, and conversion
+                    designers.
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">Still have questions?</p>
+            <a href="contact.html" class="btn btn-primary">Speak With An Expert</a>
+        </div>
+    </section>
+
+    <!-- Footer (Simplified) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <h4 class="text-gold"
+                        style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); margin-bottom: 1.5rem;">
+                        UKASHA.</h4>
+                    <p>Building powerful digital empires through elite marketing strategies, premium design, and
+                        engineered growth systems.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Agency</a></li>
+                        <li><a href="services.html">Elite Services</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Marketing Insights</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fab fa-whatsapp text-gold" style="margin-right: 10px;"></i> <a
+                                href="https://wa.me/923197791698" target="_blank">+92-319-7791-698</a></li>
+                        <li><i class="fas fa-envelope text-gold" style="margin-right: 10px;"></i> <a
+                                href="mailto:m.ukasha.nazar@gmail.com">m.ukasha.nazar@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt text-gold" style="margin-right: 10px;"></i> Silicon Valley,
+                            CA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ukasha Digital Marketer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <!-- AOS Animations JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    // Close all others
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Toggle current
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

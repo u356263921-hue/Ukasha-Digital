@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies & Results | Ukasha Digital Marketer</title>
+    <meta name="description"
+        content="View the unprecedented ROI and revenue growth we've engineered for our elite clients.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animations CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 5rem;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+        }
+
+        .case-study-card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 4rem;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-fast);
+        }
+
+        .case-study-card:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            transform: translateY(-5px);
+        }
+
+        @media (min-width: 900px) {
+            .case-study-card {
+                flex-direction: row;
+            }
+
+            .case-study-card.reverse {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .cs-visual {
+            flex: 1;
+            min-height: 400px;
+            background: var(--bg-tertiary);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            overflow: hidden;
+        }
+
+        /* Analytics Chart Simulation for Case Studies */
+        .cs-chart {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: flex-end;
+            gap: 2%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cs-bar {
+            flex: 1;
+            background: var(--glow-rgb);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+        }
+
+        .cs-bar::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.2));
+            border-radius: 4px 4px 0 0;
+        }
+
+        .cs-content {
+            flex: 1;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cs-industry {
+            color: var(--gold-primary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .cs-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cs-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cs-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-family: var(--font-heading);
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="particles-js"></canvas>
+
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"
+                style="display: flex; align-items: center; text-decoration: none; z-index: 100;">
+                <img src="assets/images/logo-horizontal.png" alt="Ukasha Digital Marketing"
+                    style="height: 65px; width: auto; max-width: 300px; object-fit: contain; mix-blend-mode: multiply; filter: contrast(1.2) drop-shadow(0 0 10px rgba(212,175,55,0.2)); transform: scale(1.1); transform-origin: left center;">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="case-studies.html" class="nav-link" style="color: var(--gold-primary)">Results</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Get
+                    Started</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container" data-aos="fade-up">
+            <h1 class="text-gold" style="font-size: 3.5rem; margin-bottom: 1rem;">Unprecedented Results</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">We measure our
+                success by the multi-million dollar empires we build for our clients.</p>
+        </div>
+    </header>
+
+    <section class="py-20">
+        <div class="container">
+
+            <!-- Case Study 1 -->
+            <div class="case-study-card" data-aos="fade-up">
+                <div class="cs-visual">
+                    <div class="cs-chart">
+                        <div class="cs-bar"
+                            style="height: 15%; background: rgba(225, 9, 9, 0.7); box-shadow: 0 0 15px rgba(225, 9, 9, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 25%; background: rgba(227, 7, 26, 0.8); box-shadow: 0 0 15px rgba(227, 7, 26, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 35%; background: rgba(215, 12, 25, 0.9); box-shadow: 0 0 15px rgba(215, 12, 25, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 45%; background: rgba(15, 143, 83, 0.9); box-shadow: 0 0 15px rgba(15, 143, 83, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 60%; background: #014a25; box-shadow: 0 0 15px rgba(1, 74, 37, 0.5); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 80%; background: #00ff15; box-shadow: 0 0 20px rgba(0, 255, 21, 0.4); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 100%; background: linear-gradient(180deg, #FFD700, #D4AF37); box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); z-index: 1;">
+                        </div>
+                    </div>
+                </div>
+                <div class="cs-content">
+                    <p class="cs-industry">E-Commerce & Luxury Retail</p>
+                    <h2 class="cs-title">Scaling a Premium Brand to $12M/yr</h2>
+                    <p class="cs-description">By overhauling their Meta and Google Ads architecture, shifting their
+                        creative strategy to focus on premium psychology, and optimizing their Shopify conversion rate,
+                        we transformed an underperforming brand into an industry leader within 8 months.</p>
+                    <div class="cs-metrics">
+                        <div>
+                            <div class="metric-value">+412%</div>
+                            <div class="metric-label">Revenue Growth</div>
+                        </div>
+                        <div>
+                            <div class="metric-value">6.8x</div>
+                            <div class="metric-label">Avg Return on Ad Spend</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="case-study-card reverse" data-aos="fade-left">
+                <div class="cs-visual">
+                    <div
+                        style="position: absolute; width: 150%; height: 150%; background: radial-gradient(circle, rgba(0,240,255,0.1) 0%, transparent 70%);">
+                    </div>
+                    <div class="cs-chart">
+                        <div class="cs-bar"
+                            style="height: 10%; background: rgba(225, 9, 9, 0.7); box-shadow: 0 0 15px rgba(225, 9, 9, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 20%; background: rgba(227, 7, 26, 0.8); box-shadow: 0 0 15px rgba(227, 7, 26, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 30%; background: rgba(215, 12, 25, 0.9); box-shadow: 0 0 15px rgba(215, 12, 25, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 50%; background: rgba(15, 143, 83, 0.9); box-shadow: 0 0 15px rgba(15, 143, 83, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 70%; background: #014a25; box-shadow: 0 0 15px rgba(1, 74, 37, 0.5); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 90%; background: #00ff15; box-shadow: 0 0 20px rgba(0, 255, 21, 0.4); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 100%; background: linear-gradient(180deg, #FFD700, #D4AF37); box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); z-index: 1;">
+                        </div>
+                    </div>
+                </div>
+                <div class="cs-content">
+                    <p class="cs-industry">B2B SaaS</p>
+                    <h2 class="cs-title">Dominating Enterprise SEO</h2>
+                    <p class="cs-description">We architected a massive content silo strategy and executed a rigorous
+                        technical SEO overhaul. This allowed the client to monopolize high-intent search terms, driving
+                        an automated pipeline of enterprise leads and reducing their Customer Acquisition Cost by 70%.
+                    </p>
+                    <div class="cs-metrics">
+                        <div>
+                            <div class="metric-value">+850%</div>
+                            <div class="metric-label">Organic Traffic</div>
+                        </div>
+                        <div>
+                            <div class="metric-value">-$940</div>
+                            <div class="metric-label">Decrease in CAC</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 3 -->
+            <div class="case-study-card" data-aos="fade-up">
+                <div class="cs-visual">
+                    <div class="cs-chart">
+                        <div class="cs-bar"
+                            style="height: 10%; background: rgba(225, 9, 9, 0.7); box-shadow: 0 0 15px rgba(225, 9, 9, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 15%; background: rgba(227, 7, 26, 0.8); box-shadow: 0 0 15px rgba(227, 7, 26, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 25%; background: rgba(215, 12, 25, 0.9); box-shadow: 0 0 15px rgba(215, 12, 25, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 45%; background: rgba(15, 143, 83, 0.9); box-shadow: 0 0 15px rgba(15, 143, 83, 0.3); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 65%; background: #014a25; box-shadow: 0 0 15px rgba(1, 74, 37, 0.5); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 85%; background: #00ff15; box-shadow: 0 0 20px rgba(0, 255, 21, 0.4); z-index: 1;">
+                        </div>
+                        <div class="cs-bar"
+                            style="height: 100%; background: linear-gradient(180deg, #FFD700, #D4AF37); box-shadow: 0 0 30px rgba(255, 215, 0, 0.6); z-index: 1;">
+                        </div>
+                    </div>
+                </div>
+                <div class="cs-content">
+                    <p class="cs-industry">Health & Wellness</p>
+                    <h2 class="cs-title">Viral Social Media Domination</h2>
+                    <p class="cs-description">We replaced their static, outdated social presence with a high-production
+                        video strategy across TikTok and Reels. Utilizing our proprietary viral framework, we built a
+                        community of 500k+ followers, leading to sold-out product launches.</p>
+                    <div class="cs-metrics">
+                        <div>
+                            <div class="metric-value">12M+</div>
+                            <div class="metric-label">Monthly Impressions</div>
+                        </div>
+                        <div>
+                            <div class="metric-value">+640%</div>
+                            <div class="metric-label">Social Commerce Sales</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="contact.html" class="btn btn-primary">Ready for your own case study?</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer (Simplified) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <h4 class="text-gold"
+                        style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); margin-bottom: 1.5rem;">
+                        UKASHA.</h4>
+                    <p>Building powerful digital empires through elite marketing strategies, premium design, and
+                        engineered growth systems.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Agency</a></li>
+                        <li><a href="services.html">Elite Services</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Marketing Insights</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fab fa-whatsapp text-gold" style="margin-right: 10px;"></i> <a
+                                href="https://wa.me/923197791698" target="_blank">+92-319-7791-698</a></li>
+                        <li><i class="fas fa-envelope text-gold" style="margin-right: 10px;"></i> <a
+                                href="mailto:m.ukasha.nazar@gmail.com">m.ukasha.nazar@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt text-gold" style="margin-right: 10px;"></i> Silicon Valley,
+                            CA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ukasha Digital Marketer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

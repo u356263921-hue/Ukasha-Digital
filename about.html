@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Ukasha Digital Marketer</title>
+    <meta name="description" content="Meet the elite team behind Ukasha Digital Marketer.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <!-- AOS Animations CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            padding: 10rem 0 5rem;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin: 4rem 0;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .about-image-wrapper:hover img {
+            transform: scale(1.02);
+        }
+
+        .about-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(5, 10, 31, 0.8));
+            pointer-events: none;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .value-card {
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .value-card i {
+            font-size: 3rem;
+            color: var(--gold-primary);
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="particles-js"></canvas>
+
+    <!-- Navigation (Same as index) -->
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"
+                style="display: flex; align-items: center; text-decoration: none; z-index: 100;">
+                <img src="assets/images/logo-horizontal.png" alt="Ukasha Digital Marketing"
+                    style="height: 65px; width: auto; max-width: 300px; object-fit: contain; mix-blend-mode: multiply; filter: contrast(1.2) drop-shadow(0 0 10px rgba(212,175,55,0.2)); transform: scale(1.1); transform-origin: left center;">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link" style="color: var(--gold-primary)">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="case-studies.html" class="nav-link">Results</a>
+                <a href="pricing.html" class="nav-link">Pricing</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Get
+                    Started</a>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container" data-aos="fade-up">
+            <h1 class="text-gold" style="font-size: 3.5rem; margin-bottom: 1rem;">Architects of Digital Dominance</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">We don't just
+                participate in the market. We redefine it for our clients.</p>
+        </div>
+    </header>
+
+    <!-- Story & Team Image -->
+    <section class="py-20">
+        <div class="container">
+            <div class="about-image-wrapper" data-aos="zoom-in">
+                <img src="assets/images/agency_team.png" alt="Ukasha Digital Elite Team">
+            </div>
+
+            <div class="text-center" data-aos="fade-up" auto-target style="max-width: 800px; margin: 0 auto;">
+                <h2 class="text-gold" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Who We Are</h2>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">
+                    Ukasha Digital Marketer was founded on a singular principle: digital marketing should not be an
+                    expense; it should be the most lucrative investment a business makes. Based out of top-tier
+                    facilities, our agency has curated the top 1% of talent across SEO, performance marketing,
+                    development, and branding.
+                </p>
+                <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+                    We treat our clients' businesses as our own empires. We engineer custom, scalable revenue systems
+                    that command attention, obliterate competitors, and drive unprecedented ROI.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-20" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="text-gold" style="font-size: 2.5rem; margin-bottom: 1rem;">Our Core Principles</h2>
+            </div>
+
+            <div class="value-grid">
+                <div class="glass-card value-card" data-aos="fade-up">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Ruthless Precision</h3>
+                    <p style="color: var(--text-secondary);">Every campaign, pixel, and line of code is meticulously
+                        crafted to maximize conversions.</p>
+                </div>
+                <div class="glass-card value-card" data-aos="fade-up">
+                    <i class="fas fa-gem"></i>
+                    <h3>Uncompromising Quality</h3>
+                    <p style="color: var(--text-secondary);">We operate at the highest echelon of digital design and
+                        strategy, settling for nothing less than perfection.</p>
+                </div>
+                <div class="glass-card value-card" data-aos="fade-up">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Obsessive Growth</h3>
+                    <p style="color: var(--text-secondary);">We are addicted to scaling revenue. If a strategy doesn't
+                        multiply your investment, we don't deploy it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <h4 class="text-gold"
+                        style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); margin-bottom: 1.5rem;">
+                        UKASHA.</h4>
+                    <p>Building powerful digital empires through elite marketing strategies, premium design, and
+                        engineered growth systems.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Agency</a></li>
+                        <li><a href="services.html">Elite Services</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="pricing.html">Pricing Plans</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="blog.html">Marketing Insights</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li><i class="fab fa-whatsapp text-gold" style="margin-right: 10px;"></i> <a
+                                href="https://wa.me/923197791698" target="_blank">+92-319-7791-698</a></li>
+                        <li><i class="fas fa-envelope text-gold" style="margin-right: 10px;"></i> <a
+                                href="mailto:m.ukasha.nazar@gmail.com">m.ukasha.nazar@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt text-gold" style="margin-right: 10px;"></i> Silicon Valley,
+                            CA</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ukasha Digital Marketer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/particles.js"></script>
+    <!-- AOS Animations JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
